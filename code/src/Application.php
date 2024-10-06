@@ -56,14 +56,18 @@ class Application {
 
             } else {
                 header("HTTP/1.0 404 Not Found");
-                $render = new Render();
-                return $render->renderError('error-rendering.tpl', []);
+                header("Location: /error-page.html");
+                die;
+                // $render = new Render();
+                // return $render->renderError('error-rendering.tpl', []);
             }
 
         } else {
             header("HTTP/1.0 404 Not Found");
-            $render = new Render();
-            return $render->renderError('error-rendering.tpl', []);
+            header("Location: /error-page.html");
+            die;
+            // $render = new Render();
+            // return $render->renderError('error-rendering.tpl', []);
 
         }
 
